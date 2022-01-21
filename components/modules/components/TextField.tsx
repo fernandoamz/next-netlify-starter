@@ -91,6 +91,9 @@ function TextField(props: OnePirateTextFieldProps & WithStyles<typeof styles>) {
 
   return (
     <MuiTextField
+      id="outlined-basic"
+      label="Outlined"
+      variant="outlined"
       InputProps={{
         classes: {
           root: classes.root,
