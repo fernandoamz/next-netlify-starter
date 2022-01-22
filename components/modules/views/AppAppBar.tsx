@@ -1,8 +1,10 @@
 import * as React from 'react';
+import Image from 'next/image'
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import AppBar from '../components/AppBar';
 import Toolbar from '../components/Toolbar';
+import Logo from "../../../assets/images/logo-sasabore.png";
 
 const rightLink = {
   fontSize: 16,
@@ -13,19 +15,21 @@ const rightLink = {
 function AppAppBar() {
   return (
     <div>
-      <AppBar position="fixed">
+      <AppBar position="fixed" style={{ backgroundColor: '#2d2d2d'}}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ flex: 1 }} />
           <Link
             variant="h6"
             underline="none"
             color="inherit"
-            href="/premium-themes/onepirate/"
+            // href="/premium-themes/onepirate/"
             sx={{ fontSize: 24 }}
           >
-            {'onepirate'}
+            <div className="logoSasabore">
+              <Image src={Logo} alt="Sasabore"/>
+            </div>
           </Link>
-          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+          {/* <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
             <Link
               color="inherit"
               variant="h6"
@@ -43,7 +47,7 @@ function AppAppBar() {
             >
               {'Sign Up'}
             </Link>
-          </Box>
+          </Box> */}
         </Toolbar>
       </AppBar>
       <Toolbar />
